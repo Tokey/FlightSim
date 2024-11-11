@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Plane : MonoBehaviour {
+
+    public bool isPlayer;
+
     [SerializeField]
     float maxHealth;
     [SerializeField]
@@ -76,7 +79,7 @@ public class Plane : MonoBehaviour {
     [SerializeField]
     GameObject damageEffect;
     [SerializeField]
-    GameObject deathEffect;
+    public GameObject deathEffect;
     [SerializeField]
     bool flapsDeployed;
     [SerializeField]
@@ -128,6 +131,8 @@ public class Plane : MonoBehaviour {
     float cannonDebounceTimer;
     float cannonFiringTimer;
 
+    GameManager gameManager;
+
     public float MaxHealth {
         get {
             return maxHealth;
@@ -141,7 +146,7 @@ public class Plane : MonoBehaviour {
         get {
             return health;
         }
-        private set {
+         set {
             health = Mathf.Clamp(value, 0, maxHealth);
 
             if (health <= MaxHealth * .5f && health > 0) {
@@ -156,11 +161,11 @@ public class Plane : MonoBehaviour {
         }
     }
 
-    public bool Dead { get; private set; }
+    public bool Dead { get; set; }
 
-    public Rigidbody Rigidbody { get; private set; }
-    public float Throttle { get; private set; }
-    public Vector3 EffectiveInput { get; private set; }
+    public Rigidbody Rigidbody { get;  set; }
+    public float Throttle { get;  set; }
+    public Vector3 EffectiveInput { get; set; }
     public Vector3 Velocity { get; private set; }
     public Vector3 LocalVelocity { get; private set; }
     public Vector3 LocalGForce { get; private set; }
@@ -212,6 +217,8 @@ public class Plane : MonoBehaviour {
         missileLockDirection = Vector3.forward;
 
         Rigidbody.velocity = Rigidbody.rotation * new Vector3(0, 0, initialSpeed);
+
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     public void SetThrottleInput(float input) {
@@ -237,6 +244,9 @@ public class Plane : MonoBehaviour {
 
     public void ApplyDamage(float damage) {
         Health -= damage;
+
+        if(!isPlayer)
+            gameManager.score += (int)damage; 
     }
 
     void Die() {
@@ -247,6 +257,8 @@ public class Plane : MonoBehaviour {
 
         damageEffect.GetComponent<ParticleSystem>().Pause();
         deathEffect.SetActive(true);
+        if (!isPlayer)  
+            gameManager.score += 100;
     }
 
     void UpdateThrottle(float dt) {

@@ -11,7 +11,8 @@
                     "id": "a601469b-e3aa-422a-806a-4f7dcba55332",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Throttle",
@@ -19,7 +20,8 @@
                     "id": "0d46f8f2-2f6f-4fe2-8623-427c869c3bde",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "RollPitch",
@@ -27,7 +29,8 @@
                     "id": "7173b259-7215-456e-ba7f-dba1aaad27e1",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Yaw",
@@ -35,7 +38,8 @@
                     "id": "56c160cd-3545-4284-abef-8d6eb62ab74c",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Camera",
@@ -43,7 +47,8 @@
                     "id": "cdd2542b-3da6-4431-be9c-bbf306e4dcd5",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ToggleFlaps",
@@ -51,7 +56,8 @@
                     "id": "0e572958-b17b-4a43-950d-d9a9324fbc89",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "FireMissile",
@@ -59,7 +65,8 @@
                     "id": "54bc0053-bbe2-45cd-80b6-dd2a4f0dee6d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "FireCannon",
@@ -67,7 +74,8 @@
                     "id": "cc901d01-643f-4c28-918b-23ed83f6433c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ToggleAI",
@@ -75,7 +83,26 @@
                     "id": "b0d256fa-cc8c-4a22-925d-479ad7049947",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Roll",
+                    "type": "Button",
+                    "id": "18619cb1-a659-4d9b-8512-fdccb99c8fde",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch",
+                    "type": "Button",
+                    "id": "56d939ae-341a-4480-98d5-8bcfa7bab5c2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -93,7 +120,7 @@
                 {
                     "name": "negative",
                     "id": "db898ab6-62ed-46c8-aa8c-185c8d579b9d",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Keyboard>/minus",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -104,7 +131,7 @@
                 {
                     "name": "positive",
                     "id": "576b7d67-9a4c-42d1-be0c-aa52f335341a",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Keyboard>/equals",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -115,7 +142,7 @@
                 {
                     "name": "",
                     "id": "9114f377-1c7f-4991-a591-b668ae086658",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -137,7 +164,7 @@
                 {
                     "name": "negative",
                     "id": "9c73b4a5-cd71-42e9-a47b-fc94c0dc4536",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Keyboard>/pageDown",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -148,7 +175,7 @@
                 {
                     "name": "positive",
                     "id": "4f8b04ef-9161-4bc7-8b96-20890e94362f",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Keyboard>/pageUp",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -192,7 +219,7 @@
                 {
                     "name": "",
                     "id": "c854cd2e-491a-4639-9836-296333fced16",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -203,7 +230,7 @@
                 {
                     "name": "",
                     "id": "f8cd153b-2c78-4690-b96d-88366b14cb64",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -214,13 +241,79 @@
                 {
                     "name": "",
                     "id": "d71bddd5-5fbb-4ffd-a940-080749cc27ad",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/backspace",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ToggleAI",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "66a7bac6-836b-4c38-89b9-92d7751ce76c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "d4c42540-104c-45cb-9cdf-62ee915065be",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "44e3cb7d-b6f7-4c1a-920e-06e9675e6998",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "eaa501d7-8948-4bfc-bfce-62fef31dd7a0",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "19f055db-1277-4ff0-8843-9e3a308406b5",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "6e7ed21b-c91e-43f1-bfe6-7d159a92bb01",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
